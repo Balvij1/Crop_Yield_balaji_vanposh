@@ -1,0 +1,56 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar  4 08:24:46 2023
+
+@author: 91751
+"""
+
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Random Forest Regressor Prediction</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+'''
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  '''
+</head>
+
+<body>
+ <div class="login">
+	<h1>Crop yield Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="float" name="State_Name" placeholder="State_Name" required="required" />
+        <input type="float" name="District_Name" placeholder="District_Name" required="required" />
+		<input type="float" name="Crop Year" placeholder="Crop Year" required="required" />
+		<input type="float" name="Season" placeholder="Season" required="required" />
+        <input type="float" name="Crop" placeholder="Crop" required="required" />
+        <input type="float" name="Temperature" placeholder="Temperature" required="required" />
+		<input type="float" name="humidity" placeholder="humidity" required="required" />
+		<input type="float" name="Soil moisture" placeholder="Soil moisture" required="required" />
+        <input type="float" name="Soil moisture" placeholder="Soil moisture" required="required" />
+        
+        <input type="float" name="area" placeholder="area" required="required" />
+        
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
+        
+        
+        
